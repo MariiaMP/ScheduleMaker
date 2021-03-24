@@ -10,7 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ScheduleApp.Data;
 using Microsoft.EntityFrameworkCore;
-//
+
 namespace ScheduleApp
 {
     public class Startup
