@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "5F9x7Q1f6Dcz69sp2oTVfwS7M3/UsQ25xcSCDLTuqCCEr8PmJdKh2ikKCsnY1nGJ1rmkiPbwENE/J392P7xl3g==",
+  "dgSpecHash": "SvYvAnItAlU3ovS9UV4apT9Q/p2LwU0hTL3YXud8r/rP1eeVo7Y5XnFKX+CnixS44mEICznImP9GEU0xFJ+nGA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\ScheduleApp\\ScheduleApp\\ScheduleApp.csproj",
+  "projectFilePath": "C:\\Users\\Dell\\source\\repos\\Schedule\\ScheduleApp\\ScheduleApp\\ScheduleApp.csproj",
   "expectedPackageFiles": [
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

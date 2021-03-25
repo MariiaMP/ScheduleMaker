@@ -8457,11 +8457,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\ScheduleApp\\ScheduleApp\\ScheduleApp.csproj",
+      "projectUniqueName": "C:\\Users\\Dell\\source\\repos\\Schedule\\ScheduleApp\\ScheduleApp\\ScheduleApp.csproj",
       "projectName": "ScheduleApp",
-      "projectPath": "C:\\Users\\Dell\\source\\repos\\ScheduleApp\\ScheduleApp\\ScheduleApp.csproj",
+      "projectPath": "C:\\Users\\Dell\\source\\repos\\Schedule\\ScheduleApp\\ScheduleApp\\ScheduleApp.csproj",
       "packagesPath": "C:\\Users\\Dell\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dell\\source\\repos\\ScheduleApp\\ScheduleApp\\obj\\",
+      "outputPath": "C:\\Users\\Dell\\source\\repos\\Schedule\\ScheduleApp\\ScheduleApp\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
