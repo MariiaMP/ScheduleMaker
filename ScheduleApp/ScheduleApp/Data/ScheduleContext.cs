@@ -15,5 +15,12 @@ namespace ScheduleApp.Data
         }
 
         public DbSet<ScheduleApp.Models.Schedule> Schedule { get; set; }
+        public DbSet<ScheduleApp.Models.Users> Users { get; set; }
+        public DbSet<ScheduleApp.Models.Subjects> Subjects { get; set; }
+        public DbSet<ScheduleApp.Models.Group> Groups { get; set; }
+        public DbSet<ScheduleApp.Models.Teachers> Teachers { get; set; }
+        public DbSet<ScheduleApp.Models.SubjectTeacher> SubjectTeachers { get; set; }
+        public DbSet<ScheduleApp.Models.SubjectGroup> SubjectGroups { get; set; }
+
     }
 }
