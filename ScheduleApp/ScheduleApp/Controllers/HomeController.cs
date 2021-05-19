@@ -23,9 +23,14 @@ namespace ScheduleApp.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult Schedule()
         {
             return Redirect("/Schedule/Index");
+        }
+        
+        public IActionResult Sigh_up()
+        {
+            return Redirect("/SignUp/Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

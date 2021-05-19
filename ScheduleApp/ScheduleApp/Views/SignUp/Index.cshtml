@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+    <body ng-app="myApp" ng-controller="AuthCtrl as au">
+        <div class="container auth-cont-marg">
+            <div class="row">
+                <div class="col-md-4 auth-column">
+
+                    <!--Login form-->
+                    <form ng-if="!au.signIn" ng-submit="sendLoginRequest()">
+                        <p class="emblem">BT21.com</p>
+                        <label><b>Username</b></label>
+                        <input ng-model="au.loginUsername" name="login" type="text" minlength="6" placeholder="Enter Username"
+                               required>
+
+                        <label><b>Password</b></label>
+                        <input ng-model="au.loginPassword" name="password" type="password" placeholder="Enter Password"
+                               pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                               title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
+                               required>
+
+                        <button type="submit" class="btn btn-success btn-block">Login</button>
+                        <button type="button" class="btn btn-info btn-block" ng-click="switchForm()">Sign Up</button>
+                    </form>
+
+                    
+                </div>
+            </div>
+            
+        </div>
+
+</body>
