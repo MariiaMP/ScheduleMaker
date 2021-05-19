@@ -9,7 +9,7 @@ using ScheduleApp.Data;
 
 namespace ScheduleApp.Migrations
 {
-    [DbContext(typeof(ScheduleContext))]
+    [DbContext(typeof(ScheduleAppContext))]
     [Migration("20210325100838_MigrationDb")]
     partial class MigrationDb
     {

@@ -10,22 +10,22 @@ using ScheduleApp.Models;
 
 namespace ScheduleApp.Controllers
 {
-    public class SchedulesController : Controller
+    public class UsersController : Controller
     {
-        private readonly ScheduleContext _context;
+        private readonly ScheduleAppContext _context;
 
-        public SchedulesController(ScheduleContext context)
+        public UsersController(ScheduleAppContext context)
         {
             _context = context;
         }
 
-        // GET: Schedules
+        // GET: Users
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Schedule.ToListAsync());
+            return View(await _context.Users.ToListAsync());
         }
 
-        // GET: Schedules/Details/5
+        // GET: Users/Details/5
         public async Task<IActionResult> Details(int? id)
         {
             if (id == null)
@@ -33,39 +33,39 @@ namespace ScheduleApp.Controllers
                 return NotFound();
             }
 
-            var schedule = await _context.Schedule
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (schedule == null)
+            var users = await _context.Users
+                .FirstOrDefaultAsync(m => m.id == id);
+            if (users == null)
             {
                 return NotFound();
             }
 
-            return View(schedule);
+            return View(users);
         }
 
-        // GET: Schedules/Create
+        // GET: Users/Create
         public IActionResult Create()
         {
             return View();
         }
 
-        // POST: Schedules/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Users/Create
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Title,ReleaseDate,Genre,Price")] Schedule schedule)
+        public async Task<IActionResult> Create([Bind("id,name,surname,email,password,role,group")] Users users)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(schedule);
+                _context.Add(users);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            return View(schedule);
+            return View(users);
         }
 
-        // GET: Schedules/Edit/5
+        // GET: Users/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -73,22 +73,22 @@ namespace ScheduleApp.Controllers
                 return NotFound();
             }
 
-            var schedule = await _context.Schedule.FindAsync(id);
-            if (schedule == null)
+            var users = await _context.Users.FindAsync(id);
+            if (users == null)
             {
                 return NotFound();
             }
-            return View(schedule);
+            return View(users);
         }
 
-        // POST: Schedules/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+        // POST: Users/Edit/5
+        // To protect from overposting attacks, enable the specific properties you want to bind to.
+        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Title,ReleaseDate,Genre,Price")] Schedule schedule)
+        public async Task<IActionResult> Edit(int id, [Bind("id,name,surname,email,password,role,group")] Users users)
         {
-            if (id != schedule.Id)
+            if (id != users.id)
             {
                 return NotFound();
             }
@@ -97,12 +97,12 @@ namespace ScheduleApp.Controllers
             {
                 try
                 {
-                    _context.Update(schedule);
+                    _context.Update(users);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ScheduleExists(schedule.Id))
+                    if (!UsersExists(users.id))
                     {
                         return NotFound();
                     }
@@ -113,10 +113,10 @@ namespace ScheduleApp.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(schedule);
+            return View(users);
         }
 
-        // GET: Schedules/Delete/5
+        // GET: Users/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -124,30 +124,30 @@ namespace ScheduleApp.Controllers
                 return NotFound();
             }
 
-            var schedule = await _context.Schedule
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (schedule == null)
+            var users = await _context.Users
+                .FirstOrDefaultAsync(m => m.id == id);
+            if (users == null)
             {
                 return NotFound();
             }
 
-            return View(schedule);
+            return View(users);
         }
 
-        // POST: Schedules/Delete/5
+        // POST: Users/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            var schedule = await _context.Schedule.FindAsync(id);
-            _context.Schedule.Remove(schedule);
+            var users = await _context.Users.FindAsync(id);
+            _context.Users.Remove(users);
             await _context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 
-        private bool ScheduleExists(int id)
+        private bool UsersExists(int id)
         {
-            return _context.Schedule.Any(e => e.Id == id);
+            return _context.Users.Any(e => e.id == id);
         }
     }
 }

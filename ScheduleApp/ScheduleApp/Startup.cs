@@ -26,11 +26,9 @@ namespace ScheduleApp
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-            services.AddDbContext<ScheduleContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("ScheduleContext")));
 
-            //services.AddDbContext<ScheduleContext>(options =>
-              //      options.UseSqlServer(Configuration.GetConnectionString("ScheduleAppContext")));
+            services.AddDbContext<ScheduleAppContext>(options =>
+                    options.UseSqlServer(Configuration.GetConnectionString("ScheduleAppContext")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

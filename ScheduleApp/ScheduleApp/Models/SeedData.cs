@@ -12,9 +12,9 @@ namespace ScheduleApp.Models
     {
         public static void Initialize(IServiceProvider serviceProvider)
         {
-            using (var context = new ScheduleContext(
+            using (var context = new ScheduleAppContext(
                 serviceProvider.GetRequiredService<
-                    DbContextOptions<ScheduleContext>>()))
+                    DbContextOptions<ScheduleAppContext>>()))
             {
                 // Look for any movies.
                 if (context.Users.Any())
@@ -27,7 +27,7 @@ namespace ScheduleApp.Models
                     {
                         id = 1,
                         name = "Iryna",
-                        surname = "Shyhinska",
+                        surname = "Shyginska",
                         email = "ishyginska@gmail.com",
                         password = "12345678",
                         role = "user",
