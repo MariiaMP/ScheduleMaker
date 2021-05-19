@@ -18,7 +18,7 @@ namespace ScheduleApp.Controllers
             _logger = logger;
         }
 
-        public IActionResult Sign_in()
+        public IActionResult Index()
         {
             return View();
         }
@@ -28,7 +28,7 @@ namespace ScheduleApp.Controllers
             return Redirect("/Schedule/Index");
         }
         
-        public IActionResult Sign_up()
+        public IActionResult SignUp()
         {
             return Redirect("/SignUp/Index");
         }
