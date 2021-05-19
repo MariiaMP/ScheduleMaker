@@ -25,7 +25,7 @@ namespace ScheduleApp.Controllers
 
         public IActionResult Privacy()
         {
-            return View();
+            return Redirect("/Schedule/Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
