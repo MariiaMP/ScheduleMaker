@@ -16,6 +16,11 @@ namespace ScheduleApp.Controllers
         {
             return View();
         }
+        public IActionResult login()
+        {
+            ViewBag.Message = "no result";
+            return View();
+        }
 
         //  
         // GET: /Schedule/Welcome/ 
