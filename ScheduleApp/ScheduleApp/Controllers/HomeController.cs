@@ -35,9 +35,7 @@ namespace ScheduleApp.Controllers
 
         public IActionResult Log()
         {
-            //this.Page.Response.Write("No user in our db");
             return View();
-
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
