@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ScheduleApp.Controllers
 {
-    public class SignUpController : Controller
+    public class ScheduleController : Controller
     {
         // 
         // GET: /Schedule/
