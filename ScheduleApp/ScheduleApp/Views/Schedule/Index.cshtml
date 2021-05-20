@@ -1,22 +1,22 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-
-<body ng-app="myApp" ng-controller="AuthCtrl as au">
-    <div class="container auth-cont-marg">
-        <div class="row">
-            <div class="col-md-4 auth-column">
-
-                <!--Login form-->
-                <form ng-if="!au.signIn" ng-submit="sendLoginRequest()">
-                    
-                    
-                </form>
-
-
-            </div>
-        </div>
-
+<header class="header">
+    <div class="container">
+        <h1>Лвівський національни університет імена Івана Франка</h1>
+        <h2><small>Розклад занять </small></h2>
     </div>
+    <nav class="page-navigation">
+        <div class="container">
+            <ul>
+                <li>Schedule</li>
+                <li>Sign_up</li>
+            </ul>
+            <form action="#" class="login">
+                <input type="submit" class="button" value="Sign out">
+            </form>
+        </div>
+    </nav>
 
-</body>
+
+</header>
